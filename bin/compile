@@ -7,7 +7,7 @@ indent() {
 echo "-----> Installing ffmpeg"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
-DOWNLOAD_URL="http://ffmpeg.org/releases/ffmpeg-4.0.tar.xz"
+DOWNLOAD_URL="https://github.com/alevfalse/heroku-buildpack-ffmpeg/ffmpeg"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
@@ -16,7 +16,7 @@ mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 mkdir -p ffmpeg
 cd ffmpeg
-curl -L --silent $DOWNLOAD_URL | tar xJ --strip-components=1
+curl -L --silent $DOWNLOAD_URL
 
 echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
