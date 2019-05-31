@@ -1,2 +1,2 @@
 # heroku-buildpack-ffmpeg
-a buildpack that installs ffmpeg for your Heroku project
+A buildpack that installs ffmpeg for your Heroku project
